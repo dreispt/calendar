@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_calendar_booking_type_user,Calendar Booking Type User,model_calendar_booking_type,base.group_user,1,0,0,0
+access_calendar_booking_type_manager,Calendar Booking Type Manager,model_calendar_booking_type,base.group_system,1,1,1,1
+access_calendar_booking_type_slot_user,Calendar Booking Type Slot User,model_calendar_booking_type_slot,base.group_user,1,0,0,0
+access_calendar_booking_type_slot_manager,Calendar Booking Type Slot Manager,model_calendar_booking_type_slot,base.group_system,1,1,1,1

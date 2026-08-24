@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_calendar_booking_type_tree" model="ir.ui.view">
+        <field name="name">calendar.booking.type.tree</field>
+        <field name="model">calendar.booking.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_calendar_booking_type_form" model="ir.ui.view">
+        <field name="name">calendar.booking.type.form</field>
+        <field name="model">calendar.booking.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="company_id" />
+                        <field name="appointment_duration" />
+                        <field name="appointment_tz" />
+                        <field name="slot_creation_interval" />
+                        <field name="resource_calendar_id" />
+                        <field name="resource_ids" widget="many2many_tags" />
+                        <field name="location_id" />
+                    </group>
+                    <notebook>
+                        <page string="Schedule">
+                            <field name="slot_ids">
+                                <list editable="bottom">
+                                    <field name="weekday" />
+                                    <field name="slot_type" />
+                                    <field name="start_hour" widget="float_time" />
+                                    <field name="end_hour" widget="float_time" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
