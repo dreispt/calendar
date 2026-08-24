@@ -25,6 +25,9 @@
         "views/calendar_booking_menus.xml",
         "data/calendar_booking_data.xml",
     ],
+    "demo": [
+        "demo/calendar_booking_demo.xml",
+    ],
     "installable": True,
     "application": False,
     "auto_install": False,

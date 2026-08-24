@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <!-- Example booking types for a furniture company demo -->
+        <record id="booking_type_sales_consultation" model="calendar.booking.type">
+            <field name="name">Sales Consultation</field>
+            <field name="appointment_duration">1.0</field>
+            <field name="appointment_tz">UTC</field>
+            <field name="slot_creation_interval">1.0</field>
+            <field name="resource_calendar_id" ref="resource.resource_calendar_std" />
+            <field name="location_id" ref="base.main_partner" />
+        </record>
+
+        <record id="booking_type_repair_visit" model="calendar.booking.type">
+            <field name="name">Repair Visit</field>
+            <field name="appointment_duration">2.0</field>
+            <field name="appointment_tz">UTC</field>
+            <field name="slot_creation_interval">1.0</field>
+            <field name="resource_calendar_id" ref="resource.resource_calendar_std" />
+            <field name="location_id" ref="base.main_partner" />
+        </record>
+
+        <!-- Monday -->
+        <record id="booking_slot_sales_mon" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">1</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+        <record id="booking_slot_repair_mon" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">1</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+
+        <!-- Tuesday -->
+        <record id="booking_slot_sales_tue" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">2</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+        <record id="booking_slot_repair_tue" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">2</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+
+        <!-- Wednesday -->
+        <record id="booking_slot_sales_wed" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">3</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+        <record id="booking_slot_repair_wed" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">3</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+
+        <!-- Thursday -->
+        <record id="booking_slot_sales_thu" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">4</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+        <record id="booking_slot_repair_thu" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">4</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+
+        <!-- Friday -->
+        <record id="booking_slot_sales_fri" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">5</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+        <record id="booking_slot_repair_fri" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">5</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="17.0" />
+        </record>
+
+        <!-- Saturday half day -->
+        <record id="booking_slot_sales_sat" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_sales_consultation" />
+            <field name="weekday">6</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="13.0" />
+        </record>
+        <record id="booking_slot_repair_sat" model="calendar.booking.type.slot">
+            <field name="appointment_type_id" ref="booking_type_repair_visit" />
+            <field name="weekday">6</field>
+            <field name="slot_type">recurring</field>
+            <field name="start_hour" eval="9.0" />
+            <field name="end_hour" eval="13.0" />
+        </record>
+    </data>
+</odoo>
